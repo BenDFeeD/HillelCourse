@@ -15,7 +15,7 @@
         double num = ReadNumberFromConsole("Enter your number:");
     if (1 <= num & num <= 100)
     {
-        if ((num % 3 == 0) & (num % 5 != 0) & (num %15 != 0))
+        if ((num % 3 == 0) & (num % 5 != 0) & (num % 15 != 0))
         {
             Console.WriteLine("Fizz");
         }
