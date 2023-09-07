@@ -41,5 +41,5 @@ while (true)
             day = "Вы ввели число больше 7, либо меньше 1. Попробуйте еще раз.";
             break;
     }
-    Console.WriteLine(day);
+    Console.WriteLine($"{day}\n");
 }
