@@ -1,8 +1,8 @@
-﻿double ReadNumberFromConsole(string message)
+﻿int ReadNumberFromConsole(string message)
 {
     Console.WriteLine(message);
     string input = Console.ReadLine();
-    bool resParse = double.TryParse(input, out double result);
+    bool resParse = int.TryParse(input, out int result);
     if (!resParse)
     {
         Console.WriteLine("Error");
@@ -14,7 +14,7 @@
 while (true)
 {
 
-    double num = ReadNumberFromConsole("Enter your number:");
+    int num = ReadNumberFromConsole("Enter your number:");
     if ((num % 2) == 0)
     {
         Console.WriteLine("Your number is even \n");

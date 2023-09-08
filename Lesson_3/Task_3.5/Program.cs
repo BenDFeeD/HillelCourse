@@ -1,8 +1,8 @@
-﻿double ReadNumberFromConsole(string message)
+﻿int ReadNumberFromConsole(string message)
 {
     Console.WriteLine(message);
     string input = Console.ReadLine();
-    bool resParse = double.TryParse(input, out double result);
+    bool resParse = int.TryParse(input, out int result);
     if (!resParse)
     {
         Console.WriteLine("Error");
@@ -12,7 +12,7 @@
 }
     while (true)
     {
-        double num = ReadNumberFromConsole("Enter your number:");
+    int num = ReadNumberFromConsole("Enter your number:");
     if (1 <= num & num <= 100)
     {
         if ((num % 3 == 0) & (num % 5 != 0) & (num % 15 != 0))

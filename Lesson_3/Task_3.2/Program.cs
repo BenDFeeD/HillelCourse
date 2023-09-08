@@ -1,8 +1,8 @@
-﻿double ReadNumberFromConsole(string message)
+﻿int ReadNumberFromConsole(string message)
 {
     Console.WriteLine(message);
     string input = Console.ReadLine();
-    bool resParse = double.TryParse(input, out double result);
+    bool resParse = int.TryParse(input, out int result);
     if (!resParse)
     {
         Console.WriteLine("Error");
@@ -12,17 +12,17 @@
 }
 while (true)
 {
-    double FirstNum = ReadNumberFromConsole("Введите первое число: ");
-    double SecondNum = ReadNumberFromConsole("Введите первое число: ");
+    int firstNum = ReadNumberFromConsole("Введите первое число: ");
+    int secondNum = ReadNumberFromConsole("Введите первое число: ");
 
-    if (FirstNum == SecondNum)
+    if (firstNum == secondNum)
         Console.WriteLine("\nРезультат: Ваши числа равны \n");
-    else if (SecondNum >= FirstNum)
+    else if (secondNum > firstNum)
     {
-        Console.WriteLine($"\nРезультат: {SecondNum} > {FirstNum}\nЧисло {SecondNum} больше");
+        Console.WriteLine($"\nРезультат: {secondNum} > {firstNum}\nЧисло {secondNum} больше");
     }
-    else if (SecondNum <= FirstNum)
+    else if (secondNum < firstNum)
     {
-        Console.WriteLine($"\nРезультат: {FirstNum} > {SecondNum} \nЧисло {FirstNum} больше");
+        Console.WriteLine($"\nРезультат: {firstNum} > {secondNum} \nЧисло {firstNum} больше");
     }
 }
